@@ -24,6 +24,7 @@ public class GridManager : MonoBehaviour
         while (pathSize < minPathLength)
         {
             pathCells = pathGenerator.GeneratePath();
+            while (pathGenerator.GenerateCrossRoads());
             pathSize = pathCells.Count;
         }
 
@@ -32,7 +33,7 @@ public class GridManager : MonoBehaviour
 
     private IEnumerator LayGrid(List<Vector2Int>  pathCells)
     {
-        // Chay coroutine va cho xong moi tiep tuc
+        // Chay coroutine va cho chay xong moi tiep tuc
         yield return StartCoroutine(LayPathCells(pathCells));
         yield return StartCoroutine(LaySceneryCells());
 
@@ -43,7 +44,6 @@ public class GridManager : MonoBehaviour
         foreach (var pathCell in pathCells)
         {
             int neighborValue = pathGenerator.GetCellNeighborValue(pathCell.x, pathCell.y);
-            Debug.Log("Tile " + pathCell.x + ", " + pathCell.y + " neighbor value = " + neighborValue);
             
             GameObject cellPrefab = pathCellObjects[neighborValue].cellPrefab;
             GameObject pathTileCell = Instantiate(cellPrefab, new Vector3(pathCell.x, 0, pathCell.y), Quaternion.identity);

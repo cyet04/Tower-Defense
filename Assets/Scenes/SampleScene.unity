@@ -488,26 +488,34 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 80d4458b77e35404cb84b4c8bf747269, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gridWidth: 16
-  gridHeight: 8
+  gridWidth: 18
+  gridHeight: 10
   minPathLength: 35
-  gridCells:
+  pathCellObjects:
   - {fileID: 11400000, guid: 9e1007e4dedff564a8854b11b1c0d743, type: 2}
   - {fileID: 11400000, guid: 9e1007e4dedff564a8854b11b1c0d743, type: 2}
   - {fileID: 11400000, guid: 8d859150b4418f54795570057d74af45, type: 2}
   - {fileID: 11400000, guid: 1da145c5c3646334cae6f43182abc430, type: 2}
   - {fileID: 11400000, guid: 2d0805cadbe31294da0aa75c18d9806c, type: 2}
   - {fileID: 11400000, guid: 80af8acfd63377c4abe284be167ca7b6, type: 2}
+  - {fileID: 11400000, guid: 8063345aeed6ac845a116f8f714861bb, type: 2}
   - {fileID: 11400000, guid: 9e1007e4dedff564a8854b11b1c0d743, type: 2}
   - {fileID: 11400000, guid: 9e1007e4dedff564a8854b11b1c0d743, type: 2}
-  - {fileID: 11400000, guid: 9e1007e4dedff564a8854b11b1c0d743, type: 2}
-  - {fileID: 11400000, guid: 9e1007e4dedff564a8854b11b1c0d743, type: 2}
+  - {fileID: 11400000, guid: 4042f90d5016da64a8d0d1714211717b, type: 2}
   - {fileID: 11400000, guid: e088499cea299e34c885c318239269a1, type: 2}
   - {fileID: 11400000, guid: 9e1007e4dedff564a8854b11b1c0d743, type: 2}
   - {fileID: 11400000, guid: fe4413df3e8131348ad9a6f1b8f22d42, type: 2}
   - {fileID: 11400000, guid: 9e1007e4dedff564a8854b11b1c0d743, type: 2}
   - {fileID: 11400000, guid: 9e1007e4dedff564a8854b11b1c0d743, type: 2}
+  - {fileID: 11400000, guid: 791ee853e28cddf4e821c45812363249, type: 2}
+  sceneryCellObjects:
   - {fileID: 11400000, guid: 9e1007e4dedff564a8854b11b1c0d743, type: 2}
+  - {fileID: 11400000, guid: a44dcfdaa33652b49b002e6ec199b80a, type: 2}
+  - {fileID: 11400000, guid: 0796893285b169b44890c72b6bcf0ddc, type: 2}
+  - {fileID: 11400000, guid: 14e7dba0f87e6514eb8da2a38338184e, type: 2}
+  - {fileID: 11400000, guid: ed3d77819a5649647957bb14ae6e2023, type: 2}
+  - {fileID: 11400000, guid: b2d2adb4e9ee04842b1751e7c537c0f1, type: 2}
+  - {fileID: 11400000, guid: f3e3f769103620d419283c424ec02f97, type: 2}
 --- !u!4 &1924529272
 Transform:
   m_ObjectHideFlags: 0
