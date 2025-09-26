@@ -1,0 +1,149 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0c1a7d1a66f8984598fe24506eac982, type: 3}
+  m_Name: Weapon_Towers
+  m_EditorClassIdentifier: 
+  _WeaponInfoItems:
+  - _Id: 1
+    _Name: Weapon - Ballista
+    _Cost: 100
+    _Hp: 150
+    _Levels: 01000000020000000300000004000000
+    _Damage:
+    - 25
+    - 40
+    - 60
+    - 90
+    _Range:
+    - 4
+    - 4.5
+    - 5
+    - 5.5
+    _Fire_rate:
+    - 1.2
+    - 1.1
+    - 1
+    - 0.9
+    _Splash_radius:
+    - 0
+    - 0
+    - 0
+    - 0
+    _Special_effect: []
+  - _Id: 2
+    _Name: Weapon - Cannon
+    _Cost: 150
+    _Hp: 200
+    _Levels: 01000000020000000300000004000000
+    _Damage:
+    - 40
+    - 65
+    - 100
+    - 150
+    _Range:
+    - 3.5
+    - 4
+    - 4.5
+    - 5
+    _Fire_rate:
+    - 2
+    - 1.8
+    - 1.6
+    - 1.4
+    _Splash_radius:
+    - 1
+    - 1.2
+    - 1.5
+    - 1.8
+    _Special_effect: []
+  - _Id: 3
+    _Name: Weapon - Catapult
+    _Cost: 200
+    _Hp: 220
+    _Levels: 01000000020000000300000004000000
+    _Damage:
+    - 50
+    - 80
+    - 120
+    - 180
+    _Range:
+    - 6
+    - 6.5
+    - 7
+    - 7.5
+    _Fire_rate:
+    - 2.5
+    - 2.3
+    - 2.1
+    - 1.9
+    _Splash_radius:
+    - 1.5
+    - 2
+    - 2.5
+    - 3
+    _Special_effect: []
+  - _Id: 4
+    _Name: Weapon - Turret
+    _Cost: 120
+    _Hp: 130
+    _Levels: 01000000020000000300000004000000
+    _Damage:
+    - 8
+    - 12
+    - 18
+    - 25
+    _Range:
+    - 3
+    - 3.5
+    - 4
+    - 4.5
+    _Fire_rate:
+    - 0.25
+    - 0.22
+    - 0.2
+    - 0.18
+    _Splash_radius:
+    - 0
+    - 0
+    - 0
+    - 0
+    _Special_effect: []
+  - _Id: 5
+    _Name: Weapon - Crystal
+    _Cost: 180
+    _Hp: 180
+    _Levels: 01000000020000000300000004000000
+    _Damage:
+    - 15
+    - 25
+    - 40
+    - 60
+    _Range:
+    - 4
+    - 4.5
+    - 5
+    - 5.5
+    _Fire_rate:
+    - 1.5
+    - 1.4
+    - 1.3
+    - 1.2
+    _Splash_radius:
+    - 0
+    - 0
+    - 0
+    - 0
+    _Special_effect:
+    - slow 2
+    - ' slow 2.5'
+    - ' slow 3'
+    - ' slow 3.5'

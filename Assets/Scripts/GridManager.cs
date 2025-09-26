@@ -6,32 +6,48 @@ using UnityEngine;
 
 public class GridManager : MonoBehaviour
 {
-    [SerializeField] private int gridWidth = 16;
-    [SerializeField] private int gridHeight = 8;
-    [SerializeField] private int minPathLength = 30;
+    public static GridManager Instance { get; private set; }
 
-    [SerializeField] private GridCellData[] pathCellObjects;
-    [SerializeField] private GridCellData[] sceneryCellObjects;
+    public int gridWidth = 16;
+    public int gridHeight = 8;
+    public int minPathLength = 30;
 
-    private PathGenerator pathGenerator;
+    public GridCellData[] pathCellObjects;
+    public GridCellData[] sceneryCellObjects;
+
+    public PathGenerator pathGenerator;
+    public List<Vector2Int> pathCells;
+
+    private void Awake()
+    {
+        if (Instance == null)
+        {
+            Instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+    }
 
     private void Start()
     {
         pathGenerator = new PathGenerator(gridWidth, gridHeight);
-        List<Vector2Int> pathCells = pathGenerator.GeneratePath();
+        pathCells = pathGenerator.GeneratePath();
 
         int pathSize = pathCells.Count;
         while (pathSize < minPathLength)
         {
             pathCells = pathGenerator.GeneratePath();
-            while (pathGenerator.GenerateCrossRoads());
+            while (pathGenerator.GenerateCrossRoads()) ;
             pathSize = pathCells.Count;
         }
 
         StartCoroutine(LayGrid(pathCells));
     }
-
-    private IEnumerator LayGrid(List<Vector2Int>  pathCells)
+    
+    public IEnumerator LayGrid(List<Vector2Int> pathCells)
     {
         // Chay coroutine va cho chay xong moi tiep tuc
         yield return StartCoroutine(LayPathCells(pathCells));
@@ -44,7 +60,7 @@ public class GridManager : MonoBehaviour
         foreach (var pathCell in pathCells)
         {
             int neighborValue = pathGenerator.GetCellNeighborValue(pathCell.x, pathCell.y);
-            
+
             GameObject cellPrefab = pathCellObjects[neighborValue].cellPrefab;
             GameObject pathTileCell = Instantiate(cellPrefab, new Vector3(pathCell.x, 0, pathCell.y), Quaternion.identity);
             pathTileCell.transform.Rotate(0f, pathCellObjects[neighborValue].yRotation, 0f);
@@ -62,7 +78,16 @@ public class GridManager : MonoBehaviour
             {
                 if (pathGenerator.CellIsEmpty(x, y))
                 {
-                    int randomIndex = Random.Range(0, sceneryCellObjects.Length);
+                    int randomIndex;
+                    if (Random.Range(0, 10) < 4)
+                    {
+                        randomIndex = Random.Range(1, sceneryCellObjects.Length);
+                    }
+                    else
+                    {
+                        randomIndex = 0;
+                    }
+
                     Instantiate(sceneryCellObjects[randomIndex].cellPrefab, new Vector3(x, 0f, y), Quaternion.identity);
                     yield return new WaitForSeconds(0.001f);
                 }

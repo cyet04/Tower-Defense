@@ -1,5 +1,12 @@
 {
   "dependencies": {
+    "com.greatclock.exceltoscriptableobject": {
+      "version": "https://github.com/greatclock/excel_to_scriptableobject.git",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {},
+      "hash": "b4a5b35e2d685dafb87cf85bcba20b4895a16e4d"
+    },
     "com.unity.addressables": {
       "version": "2.6.0",
       "depth": 0,

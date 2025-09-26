@@ -1,0 +1,190 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b73a2348c61ecf047b5e4f28bbcc216c, type: 3}
+  m_Name: ExcelExample
+  m_EditorClassIdentifier: 
+  _StudentItems:
+  - _Id: 19911302
+    _Name: Han Meimei
+    _Gender: 1
+    _Nationality: CHN
+    _Father: 200001
+    _Mother: 200002
+    _Grade: 1
+    _Class_level: 3
+    _Birthday: 1979-02-14
+    _Favourite_numbers: 17000000
+    _Hobbies:
+    - drawing
+  - _Id: 19911303
+    _Name: Jim Green
+    _Gender: 2
+    _Nationality: UK
+    _Father: E10001
+    _Mother: E10002
+    _Grade: 1
+    _Class_level: 3
+    _Birthday: 1978-03-12
+    _Favourite_numbers: 030000000c000000
+    _Hobbies:
+    - football
+  - _Id: 19911304
+    _Name: Kate Green
+    _Gender: 1
+    _Nationality: UK
+    _Father: E20001
+    _Mother: E20002
+    _Grade: 1
+    _Class_level: 3
+    _Birthday: 1980-05-01
+    _Favourite_numbers: 010000000300000005000000
+    _Hobbies:
+    - reading
+    - photographing
+  - _Id: 19911305
+    _Name: Lucy King
+    _Gender: 1
+    _Nationality: USA
+    _Father: A10001
+    _Mother: A10002
+    _Grade: 1
+    _Class_level: 3
+    _Birthday: 1979-06-01
+    _Favourite_numbers: 07000000
+    _Hobbies:
+    - piano
+  - _Id: 19911306
+    _Name: Lily King
+    _Gender: 1
+    _Nationality: USA
+    _Father: A10001
+    _Mother: A10002
+    _Grade: 1
+    _Class_level: 3
+    _Birthday: 1979-06-01
+    _Favourite_numbers: 09000000
+    _Hobbies:
+    - violin
+  - _Id: 19911307
+    _Name: Lin Tao
+    _Gender: 2
+    _Nationality: CHN
+    _Father: 300001
+    _Mother: 300002
+    _Grade: 1
+    _Class_level: 3
+    _Birthday: 1979-07-23
+    _Favourite_numbers: 0f000000
+    _Hobbies:
+    - violin
+  - _Id: 19911308
+    _Name: Ann Read
+    _Gender: 1
+    _Nationality: CAN
+    _Father: C10001
+    _Mother: C10002
+    _Grade: 1
+    _Class_level: 3
+    _Birthday: 1978-08-08
+    _Favourite_numbers: 08000000
+    _Hobbies:
+    - running
+    - swimming
+  - _Id: 19911309
+    _Name: Wei Hua
+    _Gender: 2
+    _Nationality: CHN
+    _Father: 400001
+    _Mother: 400002
+    _Grade: 1
+    _Class_level: 3
+    _Birthday: 1979-09-10
+    _Favourite_numbers: 0100000002000000030000000500000007000000
+    _Hobbies:
+    - table tennis
+  - _Id: 19911310
+    _Name: Lin Feng
+    _Gender: 2
+    _Nationality: CHN
+    _Father: 500001
+    _Mother: 500002
+    _Grade: 1
+    _Class_level: 3
+    _Birthday: 1978-12-15
+    _Favourite_numbers: 0000000002000000040000000600000008000000
+    _Hobbies:
+    - studying
+  _ParentItems:
+  - _Parent_id: 200001
+    _Name: Mr Han
+    _Relationship: 4
+    _Telephone: 22330001-123
+  - _Parent_id: 200002
+    _Name: Mrs Han
+    _Relationship: 1
+    _Telephone: 22330002
+  - _Parent_id: 300001
+    _Name: Mr Lin
+    _Relationship: 4
+    _Telephone: 32220001
+  - _Parent_id: 300002
+    _Name: Mrs Lin
+    _Relationship: 1
+    _Telephone: 32220002
+  - _Parent_id: 400001
+    _Name: Mr Wei
+    _Relationship: 4
+    _Telephone: 32110001
+  - _Parent_id: 400002
+    _Name: Mrs Wei
+    _Relationship: 1
+    _Telephone: 32110002
+  - _Parent_id: 500001
+    _Name: Mr Lin
+    _Relationship: 4
+    _Telephone: 32100001
+  - _Parent_id: 500002
+    _Name: Mrs Lin
+    _Relationship: 1
+    _Telephone: 32100002
+  - _Parent_id: A10001
+    _Name: Mr King
+    _Relationship: 4
+    _Telephone: 22220001
+  - _Parent_id: A10002
+    _Name: Mrs King
+    _Relationship: 1
+    _Telephone: 22220002
+  - _Parent_id: C10001
+    _Name: Mr Read
+    _Relationship: 4
+    _Telephone: 32210001
+  - _Parent_id: C10002
+    _Name: Mrs Read
+    _Relationship: 1
+    _Telephone: 32210002
+  - _Parent_id: E10001
+    _Name: Mr Green
+    _Relationship: 4
+    _Telephone: 22230001
+  - _Parent_id: E10002
+    _Name: Mrs Green
+    _Relationship: 1
+    _Telephone: 22230002
+  - _Parent_id: E20001
+    _Name: Mr Green
+    _Relationship: 4
+    _Telephone: 23330001
+  - _Parent_id: E20002
+    _Name: Mrs Green
+    _Relationship: 1
+    _Telephone: 23330002

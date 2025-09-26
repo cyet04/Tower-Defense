@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c7edb547146bc6458f6e72c7e5c0545, type: 3}
+  m_Name: Weapon_Towers
+  m_EditorClassIdentifier: 
+  _WeaponInfoItems:
+  - _Id: 2
+    _Name: Weapon - Cannon
+    _Cost: 150
+  - _Id: 3
+    _Name: Weapon - Catapult
+    _Cost: 200
+  - _Id: 4
+    _Name: Weapon - Turret
+    _Cost: 120
+  - _Id: 5
+    _Name: Weapon - Crystal
+    _Cost: 180
+  _WeaponLevelsItems: []

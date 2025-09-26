@@ -459,6 +459,59 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1279471198
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1279471200}
+  - component: {fileID: 1279471199}
+  m_Layer: 0
+  m_Name: Map Manager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1279471199
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1279471198}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1ee915ce60f160b4980ef7fbb7af0877, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gridManager: {fileID: 0}
+  mapSaver: {fileID: 0}
+  mapLoader: {fileID: 0}
+  mapName: New Map
+  mapDescription: 
+  savePath: Assets/Maps/
+  mapDataToLoad: {fileID: 11400000, guid: 0242e089cd229394eba74a6fc97d9b84, type: 2}
+  mapPrefabToLoad: {fileID: 8905128783939192231, guid: e50371ddc8f15b149bd0620e8f22e57d, type: 3}
+  showDebugInfo: 1
+--- !u!4 &1279471200
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1279471198}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1924529270
 GameObject:
   m_ObjectHideFlags: 0
@@ -516,6 +569,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: ed3d77819a5649647957bb14ae6e2023, type: 2}
   - {fileID: 11400000, guid: b2d2adb4e9ee04842b1751e7c537c0f1, type: 2}
   - {fileID: 11400000, guid: f3e3f769103620d419283c424ec02f97, type: 2}
+  pathCells: []
 --- !u!4 &1924529272
 Transform:
   m_ObjectHideFlags: 0
@@ -539,3 +593,4 @@ SceneRoots:
   - {fileID: 330585546}
   - {fileID: 410087041}
   - {fileID: 832575519}
+  - {fileID: 1279471200}
