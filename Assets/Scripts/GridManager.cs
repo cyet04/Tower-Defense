@@ -8,15 +8,16 @@ public class GridManager : MonoBehaviour
 {
     public static GridManager Instance { get; private set; }
 
-    public int gridWidth = 16;
-    public int gridHeight = 8;
-    public int minPathLength = 30;
+    public int gridWidth = 18;
+    public int gridHeight = 10;
+    public int minPathLength = 40;
 
     public GridCellData[] pathCellObjects;
     public GridCellData[] sceneryCellObjects;
 
     public PathGenerator pathGenerator;
     public List<Vector2Int> pathCells;
+    public RouteData routeData;
 
     private void Awake()
     {
@@ -44,15 +45,17 @@ public class GridManager : MonoBehaviour
             pathSize = pathCells.Count;
         }
 
+        pathGenerator.GenerateRoute();
+        SaveRoute();
+
         StartCoroutine(LayGrid(pathCells));
     }
-    
+
     public IEnumerator LayGrid(List<Vector2Int> pathCells)
     {
         // Chay coroutine va cho chay xong moi tiep tuc
         yield return StartCoroutine(LayPathCells(pathCells));
         yield return StartCoroutine(LaySceneryCells());
-
     }
 
     private IEnumerator LayPathCells(List<Vector2Int> pathCells)
@@ -95,5 +98,20 @@ public class GridManager : MonoBehaviour
         }
 
         yield return null;
+    }
+
+
+    public void SaveRoute()
+    {
+        if (routeData.routePoints != null)
+        {
+            routeData.routePoints.Clear();
+        }
+
+        routeData.routePoints = pathGenerator.routeCells.Select(cell => new Vector3(cell.x, 0f, cell.y)).ToList();
+#if UNITY_EDITOR
+        UnityEditor.EditorUtility.SetDirty(routeData);
+        UnityEditor.AssetDatabase.SaveAssets();
+#endif
     }
 }

@@ -96,6 +96,8 @@ GameObject:
   m_Component:
   - component: {fileID: 9125873491445101129}
   - component: {fileID: 3493477851326914150}
+  - component: {fileID: 708932485405509998}
+  - component: {fileID: 3966291683785312251}
   m_Layer: 0
   m_Name: enemy-ufo-a
   m_TagString: Untagged
@@ -131,4 +133,32 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3b78fe5245ee5bc48847499cd92404e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 2
+  enemyId: 1
+  enemyData: {fileID: 11400000, guid: e6d73c5f212b354488da9425c5c838df, type: 2}
+  enemyMovement: {fileID: 0}
+--- !u!114 &708932485405509998
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5697825666012588134}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd4b48e4b4e047446b490985f906d583, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 2
+  rotationSpeed: 5
+--- !u!114 &3966291683785312251
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5697825666012588134}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 16bd9c4ba2272884cb9ba39b20ebf0bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

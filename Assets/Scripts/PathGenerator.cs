@@ -1,11 +1,13 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.Rendering;
 
 public class PathGenerator
 {
     private int width, height;
     private List<Vector2Int> pathCells;
+    public List<Vector2Int> routeCells;
 
     private List<CrossroadPattern> crossroadPatterns;
 
@@ -16,6 +18,8 @@ public class PathGenerator
 
         var collection = PatternLoader.LoadPatterns("crossroadPatterns");
         crossroadPatterns = collection.patterns;
+
+        //crossroadPatterns = null;
     }
 
     public List<Vector2Int> GeneratePath()
@@ -60,12 +64,12 @@ public class PathGenerator
     {
         foreach (var pathCell in pathCells.ToList())
         {
+            if (crossroadPatterns == null || crossroadPatterns.Count == 0) return false;
             foreach (var pattern in crossroadPatterns)
             {
                 if (CanPlacePattern(pathCell, pattern))
                 {
                     PlacePattern(pathCell, pattern);
-                    Debug.Log($"Crossroad placed: {pattern.name} at {pathCell}");
                     return true;
                 }
             }
@@ -97,6 +101,11 @@ public class PathGenerator
         return !pathCells.Contains(new Vector2Int(x, y));
     }
 
+    public bool CellIsEmpty(Vector2Int cell)
+    {
+        return !pathCells.Contains(cell);
+    }
+
     public int GetCellNeighborValue(int x, int y)
     {
         int returnValue = 0;
@@ -124,7 +133,47 @@ public class PathGenerator
         return returnValue;
     }
 
-    //public List<Vector2Int> GenerateRoute()
-    //{
-    //}
+    public List<Vector2Int> GenerateRoute()
+    {
+        routeCells = new List<Vector2Int>();
+        Vector2Int direction = Vector2Int.right;
+        Vector2Int currentCell = pathCells[0];
+
+        while (currentCell.x < width - 1)
+        {
+            routeCells.Add(currentCell);
+
+            if (!CellIsEmpty(currentCell + direction))
+            {
+                currentCell += direction;
+            }
+            else if (!CellIsEmpty(currentCell + Vector2Int.up) && direction != Vector2Int.down)
+            {
+                direction = Vector2Int.up;
+                currentCell += direction;
+            }
+            else if (!CellIsEmpty(currentCell + Vector2Int.down) && direction != Vector2Int.up)
+            {
+                direction = Vector2Int.down;
+                currentCell += direction;
+            }
+            else if (!CellIsEmpty(currentCell + Vector2Int.right) && direction != Vector2Int.left)
+            {
+                direction = Vector2Int.right;
+                currentCell += direction;
+            }
+            else if (!CellIsEmpty(currentCell + Vector2Int.left) && direction != Vector2Int.right) {
+                direction = Vector2Int.left;
+                currentCell += direction;
+            }
+            else
+            {
+                throw new System.Exception("Het route roi");
+            }
+        }
+
+        routeCells.Add(currentCell);
+
+        return routeCells;
+    }
 }
